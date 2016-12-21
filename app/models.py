@@ -3,7 +3,7 @@ from flask import url_for, current_app
 
 class Customer(object):
 	def get_data(self,user,password):
-		odoo = odoorpc.ODOO(current_app.config['ODOO_HOST'], port=80)
+		odoo = odoorpc.ODOO(current_app.config['ODOO_HOST'], port=8069)
 		odoo.login('devel', user, password)
 		#user = odoo.env.user
 		#user_data = odoo.execute('res.users', 'read', [user.id])
