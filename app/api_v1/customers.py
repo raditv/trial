@@ -2,7 +2,6 @@ from flask import request
 from . import api
 from ..decorators import json
 from ..models import Customer
-import json as js
 
 @api.route('/customers/', methods=['GET'])
 @json

@@ -18,4 +18,4 @@ def after_request(rv):
     return rv
 
 
-from . import errors, customers
+from . import errors, customers, products
