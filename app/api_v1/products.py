@@ -1,12 +1,11 @@
 from flask import request
 from . import api
 from ..models import Product
-from ..decorators import json, paginate
+from ..decorators import json
 
 
 @api.route('/products/', methods=['GET'])
 @json
-@paginate('products')
 def get_products():
     return Product().get_data(request.headers['username'],request.headers['password'])
 
