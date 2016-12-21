@@ -22,5 +22,5 @@ class Product(object):
 			product_ids = Product.search([])
 			products = dict()
 			for product in Product.browse(product_ids):
-				products[product.id]= {'Nama': product.name, 'Kategori': product.categ_id, 'Kode': product.default_code, 'Harga': product.list_price}
+				products[product.id]= {'Nama': product.name, 'Kategori': product.categ_id.name, 'Kode': product.default_code, 'Harga': product.list_price}
 		return products
